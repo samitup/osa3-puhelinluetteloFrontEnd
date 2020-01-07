@@ -1,24 +1,14 @@
 import React from 'react';
 
-const Notification = ({ message }) => {
+const Notification = ({ message, messageColor }) => {
     if(message === null) {
         return null
     }
-  
-    if(message.includes('already')){
-    return(
-        <div className="error">
-            {message}
-        </div>
-            )
-    }else{
         return(
-            <div className="message">
+            <div className={messageColor}>
             {message}
         </div>
         )
     }
   
-            
-}
 export default Notification
